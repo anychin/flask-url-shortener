@@ -7,7 +7,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
-        'Flask==0.12.2',
+        'Flask==0.12.3',
         'Flask-Caching==1.3.3',
         'Flask-SQLAlchemy==2.3.2',
         'SQLAlchemy-Utils==0.32.18',
