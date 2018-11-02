@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  web:
+    restart: always
+    build: .
+    command: bash -c "python scripts/init_db.py && gunicorn -b 0.0.0.0:5000 api.wsgi"
+    ports:
+      - "5000:5000"
+    links:
+      - database
+    volumes:
+      - ${PWD}:/app/
+
+  database:
+    image: postgres:9.4.5
+    environment:
+      - POSTGRES_PASSWORD=babylon
+      - POSTGRES_USER=babylon
+      - PGDATA=/var/lib/postgresql/data/pgdata
