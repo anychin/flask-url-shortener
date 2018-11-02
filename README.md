@@ -1,10 +1,10 @@
-###API to generate Short URL by Flask
+### API to generate Short URL by Flask
 
-####Run
+#### Run
 ```
 $ docker-compose up
 ```
-####Check how it works
+#### Check how it works
 
 ```
 curl -H "Content-Type: application/json" -X POST -d '{"url":"www.reddit.com"}' http://localhost:5000/urls/
